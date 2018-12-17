@@ -1,5 +1,6 @@
 .btn {
 
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -8,6 +9,10 @@
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
+
+        // Change <button> defaults
+        border: none;
+        cursor: pointer;
     }
 
     &--white {
@@ -55,7 +60,8 @@
         opacity: 0;
     }
 
-    &:active {
+    &:active,
+    &:focus {
         transform: translateY(-1px);
     }
 
