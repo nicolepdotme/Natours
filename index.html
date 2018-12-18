@@ -48,7 +48,7 @@
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section-about" id="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Exciting tours for adventurous people
@@ -81,7 +81,7 @@
             </div>
         </section>
 
-        <section class="section-features">
+        <section class="section-features" id="section-features">
 
             <div class="row">
                 <div class="col-1-of-4">
@@ -131,7 +131,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -163,7 +163,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -193,7 +193,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -224,7 +224,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$897</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -236,7 +236,7 @@
             </div>
         </section>
 
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4">
@@ -291,7 +291,7 @@
             </div>
         </section>
 
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="book">
                     <div class="book__form">
@@ -351,13 +351,37 @@
             </div>
             <div class="col-1-of-2">
                 <p class="footer__copyright">Built by <a href="#" class="footer__link">Nicole Peery</a> for Jonas
-                    Schmedtmann's online course <a href="https://www.udemy.com/share/1000cAAEMcdFhURHw=/">Advanced CSS
+                    Schmedtmann's online course <a href="https://www.udemy.com/share/1000cAAEMcdFhURHw=/" class="footer__link">Advanced
+                        CSS
                         and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are
                     100% allowed to use this webpage for both personal and commercial use, but do not claim it as your
                     own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated.</p>
             </div>
         </div>
     </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="Girl on a canoe" class="popup__img">
+                <img src="img/nat-9.jpg" alt="Man standing on cliff" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before
+                    booking</h3>
+                <p class="popup__text">Phasellus in tellus at nisl finibus consequat ac quis nisi. Curabitur
+                    sollicitudin ac enim eu
+                    tincidunt. Etiam ut tortor rutrum, fringilla felis gravida, consectetur justo. Suspendisse blandit
+                    massa at tellus
+                    auctor mattis. Suspendisse sit amet nulla tortor. Donec quis velit luctus, luctus nisl et, luctus
+                    risus.
+                    Etiam ut ipsum a ante scelerisque malesuada vitae at turpis.</p>
+                <a href="#" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
 
     <!-- <section class="grid">
         <div class="row">
