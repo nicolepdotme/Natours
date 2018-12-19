@@ -1,5 +1,4 @@
 .navigation {
-
     &__checkbox {
         display: none;
     }
@@ -18,13 +17,13 @@
         cursor: pointer;
 
         @include respond(tab-port) {
-            top: 4.5rem;
-            right: 4.5rem;
+            top: 4rem;
+            right: 4rem;
         }
 
         @include respond(phone) {
-            top: 3.5rem;
-            right: 3.5rem;
+            top: 3rem;
+            right: 3rem;
         }
     }
 
@@ -48,7 +47,6 @@
             top: 3.5rem;
             right: 3.5rem;
         }
-
     }
 
     &__nav {
@@ -68,10 +66,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        list-style-type: none;
+        list-style: none;
         text-align: center;
         width: 100%;
-
     }
 
     &__item {
@@ -84,14 +81,19 @@
         &:visited {
             display: inline-block;
             font-size: 3rem;
-            padding: 1rem 2rem;
             font-weight: 300;
+            padding: 1rem 2rem;
             color: $color-plain-white;
             text-decoration: none;
             text-transform: uppercase;
-            background-image: linear-gradient(114deg, transparent 0%, transparent 50%, $color-plain-white 50%);
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-plain-white 50%);
             background-size: 220%;
             transition: all .4s;
+
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
         }
 
         &:hover,
@@ -102,18 +104,19 @@
         }
     }
 
-    // FUNCTIONALITY
 
+    //FUNCTIONALITY
     &__checkbox:checked~&__background {
-        transform: scale(90);
+        transform: scale(80);
     }
 
     &__checkbox:checked~&__nav {
         opacity: 1;
-        width: 100%
+        width: 100%;
     }
 
-    // ICON
+
+    //ICON
     &__icon {
         position: relative;
         margin-top: 3.5rem;
@@ -142,7 +145,6 @@
         &::after {
             top: .8rem;
         }
-
     }
 
     &__button:hover &__icon::before {

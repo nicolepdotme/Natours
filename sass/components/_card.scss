@@ -13,6 +13,7 @@
         top: 0;
         left: 0;
         width: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden;
@@ -39,6 +40,7 @@
         }
     }
 
+
     &:hover &__side--front {
         transform: rotateY(-180deg);
     }
@@ -46,6 +48,7 @@
     &:hover &__side--back {
         transform: rotateY(0);
     }
+
 
     // FRONT SIDE STYLING
     &__picture {
@@ -59,16 +62,17 @@
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
-                url('../img/nat-5.jpg');
+                url(../img/nat-5.jpg);
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url('../img/nat-6.jpg');
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+                url(../img/nat-6.jpg);
         }
 
         &--3 {
             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
-                url('../img/nat-7.jpg');
+                url(../img/nat-7.jpg);
         }
     }
 
@@ -81,14 +85,13 @@
         position: absolute;
         top: 12rem;
         right: 2rem;
-        width: 67%;
+        width: 75%;
 
     }
 
     &__heading-span {
         padding: 1rem 1.5rem;
         -webkit-box-decoration-break: clone;
-        -o-box-decoration-break: clone;
         box-decoration-break: clone;
 
         &--1 {
@@ -124,14 +127,13 @@
                 padding: 1rem;
 
                 &:not(:last-child) {
-                    border-bottom: 1px solid #eee;
+                    border-bottom: 1px solid $color-grey-light-2;
                 }
             }
         }
     }
 
-    // BACK SIDE STYLING
-
+    // FRONT SIDE STYLING
     &__cta {
         position: absolute;
         top: 50%;
@@ -143,8 +145,8 @@
 
     &__price-box {
         text-align: center;
-        margin-bottom: 8rem;
         color: $color-plain-white;
+        margin-bottom: 8rem;
     }
 
     &__price-only {
@@ -156,4 +158,53 @@
         font-size: 6rem;
         font-weight: 100;
     }
+
+
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
+
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-plain-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-plain-black, .15);
+
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+
+        &__details {
+            padding: 1rem 3rem;
+        }
+
+        // FRONT SIDE STYLING
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+        }
+    }
+
 }
