@@ -10,3 +10,5 @@
 * Mobile responsive design with media queries
 
 ## See live demo: [Natours project](https://nicolepdev.github.io/Natours/)
+
+![Natours landing page screenshot](https://res.cloudinary.com/dqe0hw0ru/image/upload/v1565188765/natours.jpg)
